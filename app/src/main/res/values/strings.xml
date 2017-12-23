@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Picky Fooder</string>
+    <string name="defaultFoodItem">Salad</string>
+</resources>
