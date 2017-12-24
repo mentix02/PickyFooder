@@ -8,7 +8,7 @@ import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
-    val foodList = arrayListOf("Salad")
+    private val foodList = arrayListOf("Salad", "Pizza", "Pasta", "Burger", "Sandwich")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        newFoodBtn.setOnClickListener(){
+        newFoodBtn.setOnClickListener{
             println("clicked") // sanity check
             val random = Random()
             val randomFoodIndex = random.nextInt(foodList.count())
             foodName.text = foodList[randomFoodIndex]
         }
 
-        addFoodBtn.setOnClickListener(){
+        addFoodBtn.setOnClickListener{
             val newFood = addFootInp.text.toString()
             foodList.add(newFood)
             addFootInp.text.clear()
